@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get IP Address</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h1>Get IP Address</h1>
+<button id="getIpButton">Get IP Address</button>
+<p id="ipResult"></p>
+
+<script>
+  $(document).ready(function() {
+    $('#getIpButton').click(function() {
+      $.getJSON('https://api.ipify.org?format=json', function(data) {
+        $('#ipResult').text('Your IP Address is: ' + data.ip);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

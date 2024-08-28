@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_cardio.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header class="p-3 text-bg-dark">
+        <div class="logo">
+          <img src="heart_plus.jpg" alt="heart_plus" ,width="30" height="40">
+        </div>
+  
+  
+        <div class="container">
+  
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+  
+  
+            <div class="symbol1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-hospital"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1zM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25z" />
+                <path
+                  d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1zm2 14h2v-3H7zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zm0-14H6v1h4zm2 7v7h3V8zm-8 7V8H1v7z" />
+              </svg>
+            </div>
+  
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap"></use>
+              </svg>
+            </a>
+  
+  
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+              <li><a href="Feature.html" class="nav-link px-2 text-white">Features</a></li>
+              <li><a href="Hospitals.html" class="nav-link px-2 text-white">Hospitals</a></li>
+              <li><a href="Services.html" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="about.html" class="nav-link px-2 text-white">About</a></li>
+              <li><a href="#" class="nav-link px-2 specialty text-secondary" onmouseover="showPopup()"
+                  onmouseout="hidePopup()">Specialist</a>
+              </li>
+      
+            </ul>
+            
+  
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                aria-label="Search">
+            </form>
+  
+            <div class="text-end">
+  
+              <a href="/login">
+                <button type="button" class="btn btn-outline-light me-2">Login</button>
+              </a>
+              
+              <a href="/signup">
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </a>
+            </div>
+  
+  
+          </div>
+  
+        </div>
+  
+  
+      </header>
+  
+  
+  
+    
+  
+      <div class="popup" id="popup" onmouseover="showPopup()" onmouseout="hidePopup()">
+        <div class="speciality">
+          <a href="#" class="cardio">
+          <img src="../images/Cardiology/img2.svg" alt="Cardiology">
+            <p>Cardiology<br>हृदय</p>
+          </a>
+        </div>
+        <div class="speciality">
+          <a href="eye_care.html" class="eyec">
+          <img src="../images/EyeCare/img6.svg " alt="Eye Care">
+            <p>Eye Care<br>आँखों की देखभाल</p>
+          </a>
+        </div>
+        <div class="speciality">
+          <a href="dentist.html" class="dent">
+          <img src="../images/Dentist/img4.svg" alt="Dentist">
+            <p>Dentist<br>दाँतों का डॉक्टर</p>
+          </a>
+        </div>
+  
+        <div class="speciality">
+          <a href="ent.html" class="Ent">
+          <img src="../images/Ent/img2.svg" alt="ENT">
+            <p>ENT<br>कान, नाक, गला</p>
+          </a>
+        </div>
+        <div class="speciality">
+          <a href="nephrology.html" class="neph">
+          <img src="../images/Nephrology/img3.svg" alt="Nephrology">
+            <p>Nephrology<br>किडनी रोग विशेषज्ञ</p>
+          </a>
+        </div>
+        <div class="speciality">
+          <a href="paediatric.html" class="paed">
+          <img src="../images/Paediatric/img4.svg" alt="Paediatric">
+            <p>Paediatric<br>बाल चिकित्सा</p>
+          </a>
+        </div>
+        <div class="speciality">
+          <a href="fertility.html" class="fert">
+          <img src="../images/Fertility/img7.svg" alt="Fertility">
+            <p>Fertility<br>गर्भधारण</p>
+          </a>
+        </div>
+      </div>
+
+
+    <div class="cardio1">
+
+        <h1><strong>Heart Attack and<br>Stroke Symptoms</strong></h1>
+        <p>Heart attacks often cause prolonged discomfort in the chest, feeling like pressure, squeezing, or pain.</p>
+
+        <!-- <div class="button1" style=" display: inline-block;">
+            <form action="/location" method="POST">
+
+                <input type="text"
+                style="border: 0; height: 2.5rem; background-color: rgb(211, 225, 237); border-radius: 10px; text-align:center; "
+                placeholder="locations" ;>
+                <span>|</span>
+                <input type="text"
+                style="border: 0; height: 2.5rem; background-color: rgb(211, 225, 237); border-radius: 10px;"
+                placeholder="Search doctors & Hospitals">
+               <button class="btn btn-success" style="height: 2.75rem;">Search</button>
+            </form>
+        </div> -->
+
+        <div class="button1" style="display: inline-block;">
+            <form  method="POST">
+                <input type="text" name="locations" style="border: 0; height: 2.5rem; background-color: rgb(211, 225, 237); border-radius: 10px; text-align:center;" placeholder="locations">
+                <span>|</span>
+                <input type="text" name="searchQuery" style="border: 0; height: 2.5rem; background-color: rgb(211, 225, 237); border-radius: 10px;" placeholder="Search doctors & Hospitals">
+                <input type="submit" class="btn btn-success" style="height: 2.75rem;" value="Get Nearby Hospitals" formaction="/loc"/>
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="button1" style="display: inline-block;">
+        <form method="POST" action="/locationss"> Correct form action -->
+            <!-- <input type="text" name="locations" style="border: 0; height: 2.5rem; background-color: rgb(211, 225, 237); border-radius: 10px; text-align:center;" placeholder="locations">
+            <span>|</span>
+            <input type="text" name="searchQuery" style="border: 0; height: 2.5rem; background-color: rgb(211, 225, 237); border-radius: 10px;" placeholder="Search doctors & Hospitals">
+            <input type="submit" class="btn btn-success" style="height: 2.75rem;" value="Search">
+        </form>
+    </div> --> 
+<% if(flag!=0) {%>
+<%- include('temp') %>
+<% } else {%>
+
+    <div class="cardio2" style="margin-bottom: 0 ;">
+        <h3><strong>Top Doctors</strong></h3>
+        <p>Brushing your teeth twice daily with fluoride toothpaste <br> helps prevent plaque buildup and cavities.</p>
+        <button class="btn btn-primary" style="width: 10rem;  height:3rem">View All</button>
+    </div>
+
+    <div class="container px-2 pb-4" id="featured-3">
+        <!-- <h2 class="pb-2 border-bottom">Columns with icons</h2> -->
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 ;">
+            <div class="feature col " style="border: 1px solid rgb(238, 226, 226); background-color:#f0f6ff;">
+
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg> -->
+                    <img src="../images/DoctorList/doctor.jpg" height=100px alt="">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and probably just keep going until we run out of words.</p>
+
+
+                <button class="btn btn-primary" style="width: 10rem;  height:3rem ;margin-left: 20%;">Book Now</button>
+
+            </div>
+            <div class="feature col" style="border: 1px solid rgb(238, 226, 226);background-color: #f0f6ff;">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg> -->
+                    <img src="../images/DoctorList/doctor.jpg" height=100px alt="">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and probably just keep going until we run out of words.</p>
+
+                <button class="btn btn-primary" style="width: 10rem;  height:3rem ;margin-left: 20%;">Book Now</button>
+            </div>
+            <div class="feature col" style="border: 1px solid rgb(238, 226, 226);background-color: #f0f6ff;">
+                <div
+                    class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg> -->
+                    <img src="../images/DoctorList/doctor.jpg" height=100px alt="">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and probably just keep going until we run out of words.</p>
+
+                <button class="btn btn-primary" style="width: 10rem;  height:3rem ;margin-left: 20%;">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <% } %>
+
+    <div style="background-color: #f0f6ff; padding: 3%;">
+        <h1>Your Heart, Our Priority</h1>
+        <p>Welcome to our cardiology practice, where we specialize in providing expert care for your heart health. Led
+            by a team of experienced cardiologists, we are dedicated to helping you achieve and maintain optimal
+            cardiovascular wellness.</p>
+        <h3 style="color: #1c4188;">Our Services Include:</h3>
+        <ul>
+
+
+            <li>Comprehensive cardiac evaluations and screenings</li>
+            <li>Management of hypertension, high cholesterol, and other cardiovascular risk factors</li>
+            <li>Diagnosis and treatment of heart conditions such as coronary artery disease, arrhythmias, and heart
+                failure</li>
+            <li>Cardiac rehabilitation programs to promote heart health and recovery after cardiac events</li>
+        </ul>
+
+        <p>At our practice, we understand the importance of a healthy heart in your overall well-being. Whether you are
+            seeking preventive care or treatment for a heart condition, our team is committed to providing compassionate
+            care and personalized treatment options tailored to your unique needs.
+
+        </p>
+
+        <h3 style="color: #1c4188;">Heart Attack</h3>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div style="display: flex; justify-content: center;">
+                        <div
+                            style="height: 175px; width: 175px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; border: 1px solid black; margin: 20px;">
+                            <img src="../images/Cardiology/img5.svg"
+                                style=" background-color: skyblue; width: 100%; height: 100%; object-fit: cover;"
+                                alt="...">
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div style="display: flex; justify-content: center;">
+                        <div
+                            style="height: 175px; width: 175px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; border: 1px solid black; margin: 20px;">
+                            <img src="../images/Cardiology/img2.svg"
+                                style="background-color: skyblue; width: 100%; height: 100%; object-fit: cover;"
+                                alt="...">
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a short card.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+
+                    <div style="display: flex; justify-content: center;">
+                        <div
+                            style="height: 175px; width: 175px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center; border: 1px solid black; margin: 20px;">
+                            <img src="../images/Cardiology/img7.svg"
+                                style="background-color: skyblue; width: 100%; height: 100%; object-fit: cover;"
+                                alt="...">
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div style="margin:5% 0 5% 0;display: flex;">
+        <img src="../images/Cardiology/img9.svg" height="450px" alt="heart_attack_img">
+
+        <div style="margin: 40px; width:60%">
+
+            <ul style="list-style: square; font-size: x-large;">
+                <li style="margin: 2%; color: #818181;">Chest discomfort (pressure, squeezing, pain).</li>
+                <li style="margin: 2%; color: #818181;">Pain or discomfort in other areas of the upper body.</li>
+                <li style="margin: 2%; color: #818181;">Shortness of breath.</li>
+                <li style="margin: 2%; color: #818181;">Cold sweats, nausea, or light-headedness.</li>
+                <li style="margin: 2%; color: #818181;">Sudden fatigue or weakness.</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div style="margin: 25px; background-color:#f0f6ff; height:45vh;padding: 2.5%;">
+
+        <h2 style="margin: 2%;text-align: center; color: #1c4188;">HOW TO GET A DOCTOR</h2>
+        <div style="display: flex; justify-content: space-around; ">
+            <img src="../images/EmergencyBooking/Group1137.svg" height="150px" alt="">
+            <img src="../images/EmergencyBooking/Group1134.svg" height="150px" alt="">
+            <img src="../images/EmergencyBooking/Group1135.svg" height="150px" alt="">
+            <img src="../images/EmergencyBooking/Group1136.svg" height="150px" alt="">
+        </div>
+    </div>
+
+
+
+
+    <div style="margin:5% 0 5% 0;display: flex; justify-content: space-between;">
+
+
+        <div style="margin: 40px; width: 60%;">
+            <h2 style="color: #1c4188;"><strong>STOKE SYMPTOMS</strong></h2>
+            <ul style="list-style: square;font-size: x-large;">
+                <li style="margin :2%  ;color: #818181;">Sudden Numbness or Weakness: Weakness or numbness, often on one side of the body, affecting the
+                    face, arm, or leg.
+                </li>
+                <li style="margin :2% ;color: #818181;">Confusion: Sudden trouble speaking, understanding speech, or confusion.
+                </li>
+                <li style="margin :2% ;color: #818181;">Trouble Walking: Sudden dizziness, loss of balance, or coordination difficulties, sometimes with a
+                    severe headache.
+                </li>
+                <li style="margin :2% ;color: #818181;">Vision Problems: Sudden trouble seeing, like blurred or blackened vision, in one or both eyes.
+                </li>
+                <li style="margin :2% ;color: #818181;">Severe Headache: A sudden, severe headache, possibly with vomiting, dizziness, or altered
+                    consciousness.
+                </li>
+            </ul>
+        </div>
+
+        <img src="../images/Cardiology/img10.svg" height="450px" alt="heart_attack_img">
+
+    </div>
+
+
+
+
+    <div class="faq-container">
+        <h1>FAQ</h1>
+        <div class="faq">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h2>1. What are the common risk factors for heart disease?</h2>
+                <div class="faq-answer">
+                    <p>Common risk factors include high blood pressure, high cholesterol, diabetes, obesity, smoking,
+                        and a sedentary lifestyle.</p>
+                </div>
+            </div>
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h2>2. How often should one check their blood pressure for heart health?</h2>
+                <div class="faq-answer">
+                    <p>Regular monitoring of blood pressure is important. Individuals with normal blood pressure should
+                        check it at least once a year, while those with hypertension or other risk factors may need more
+                        frequent checks as advised by their healthcare provider.</p>
+                </div>
+            </div>
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h2>3. What role does exercise play in heart health?</h2>
+                <div class="faq-answer">
+                    <p>Exercise helps improve cardiovascular health by strengthening the heart muscle, improving blood
+                        circulation, and reducing risk factors such as high blood pressure and high cholesterol.</p>
+                </div>
+            </div>
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h2>4. How does stress impact heart health?</h2>
+                <div class="faq-answer">
+                    <p>Stress can negatively impact heart health by increasing blood pressure, causing inflammation, and
+                        contributing to unhealthy coping mechanisms such as smoking or overeating.</p>
+                </div>
+            </div>
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h2>5. What dietary choices promote a healthy heart?</h2>
+                <div class="faq-answer">
+                    <p>Healthy dietary choices include consuming fruits, vegetables, whole grains, lean proteins, and
+                        healthy fats while limiting processed foods, added sugars, and high-sodium items.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span style="color: azure;">© 2024 All copy rights reserved</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="padding-right: 5%;">
+                <li class="ms-3"><a class="text-muted" href="#"><img src="../images/contact/tiwtter.png" alt=""
+                            height="24"></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><img src="../images/contact/instagram.png" alt=""
+                            height="24"></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><img src="../images/contact/facebook.png" alt=""
+                            height="24"></a></li>
+            </ul>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function toggleAnswer(element) {
+            element.classList.toggle('active');
+        }
+
+        function hidePopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+      function showPopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'grid';
+        popup.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      }
+
+    </script>
+</body>
+
+</html>

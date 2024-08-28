@@ -1,0 +1,143 @@
+.symbol {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+  }
+  
+  .p-3 {
+    display: flex;
+  }
+  
+  .container {
+    background-color: rgb(37, 44, 64);
+  }
+  
+  .head1 {
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid #000;
+    height: 100%;
+  }
+  
+  .logo1 a p {
+    padding-top: 5px;
+    font-weight: 600;
+    display: block;
+    font-size: 80%;
+  }
+  
+  .logo1 {
+    font-family: 'Roboto Condensed';
+    display: flex;
+    float: left;
+    width: 45%;
+    font-size: 16px;
+    line-height: 105%;
+    min-height: 103px;
+    padding: 0px;
+    text-transform: uppercase;
+    margin: 0px;
+  }
+  
+  .float-element {
+    float: right;
+    line-height: 105%;
+    min-height: 103px;
+    padding: 0px;
+    text-transform: uppercase;
+    margin: 0px;
+  }
+  
+  @media (max-width: 675px) {
+    .float-element {
+      display: none;
+    }
+  }
+  
+  .nav-link:hover {
+    font-size: large;
+    background-color: rgb(57, 71, 148);
+  }
+  
+  .main-element {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    width: 200px;
+    margin: 100px auto;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .popup {
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 10px;
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; */
+  }
+  
+  .speciality {
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 150px;
+  }
+  
+  .speciality img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .speciality img:hover {
+   transform: scale(1.4);
+  }
+  
+  .speciality p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .speciality p br {
+    margin-bottom: 4px;
+  }
+
+  .speciality a {
+    text-decoration: none;
+  }
+
+  .cardio {
+    text-decoration: none;
+  }
+  
+  .iframe-container{
+    display: flex;
+
+    /* padding-top: 20%; */
+    /* padding-bottom: 0px; */
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+    padding: 10px 0;
+    
+
+  }
+
+  .main{
+         height: 100%;
+         /* position: relative; */
+  }

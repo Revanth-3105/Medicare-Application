@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Animation</title>
+    <style>
+        .container1 {
+            display: flex;
+            justify-content: space-around;
+            background-color: #5bb9f1;
+            /* padding: 20px; */
+            border-radius: 10px;
+           
+        }
+        .item {
+            text-align: center;
+            color: white;
+        }
+        .icon {
+            font-size: 50px;
+        }
+        .number {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .text {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container1">
+    <div class="item">
+        <div class="icon">👥</div>
+        <div class="number" data-target="1000">0</div>
+        <div class="text">ACTIVE VISITORS</div>
+    </div>
+    <div class="item">
+        <div class="icon">🩺</div>
+        <div class="number" data-target="500">0</div>
+        <div class="text">TREATMENT OF PATIENT</div>
+    </div>
+    <div class="item">
+        <div class="icon">👨‍⚕️</div>
+        <div class="number" data-target="100">0</div>
+        <div class="text">ACTIVE DOCTORS</div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.number');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const speed = 200; // change animation speed here
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    });
+</script>
+
+</body>
+</html>

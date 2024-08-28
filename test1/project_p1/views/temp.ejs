@@ -1,0 +1,97 @@
+<div class="container px-2 pb-4" id="featured-3">
+    <% if (locals.content && locals.content.features) { %>
+    <div id="cards-container" class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <!-- Cards will be inserted here dynamically by JavaScript -->
+    </div>
+    <% } else { %>
+    <p>Waiting for info.....</p>
+    <% } %>
+
+    <!-- Pagination Controls -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li id="prev-page" class="page-item">
+                <a class="page-link" href="#" onclick="prevPage()">Previous</a>
+            </li>
+            <!-- Page numbers will be inserted here dynamically by JavaScript -->
+            <li id="next-page" class="page-item">
+                <a class="page-link" href="#" onclick="nextPage()">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    const itemsPerPage = 3;
+    const content = <%- JSON.stringify(locals.content.features) %>;
+    let currentPage = 1;
+    const totalPages = Math.ceil(content.length / itemsPerPage);
+
+    function renderCards() {
+        const cardsContainer = document.getElementById('cards-container');
+        cardsContainer.innerHTML = '';
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = Math.min(startIndex + itemsPerPage, content.length);
+
+        for (let i = startIndex; i < endIndex; i++) {
+            const card = document.createElement('div');
+            card.classList.add('feature', 'col');
+            card.style.border = '1px solid rgb(238, 226, 226)';
+            card.style.backgroundColor = '#f0f6ff';
+            card.innerHTML = `
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <img src="../images/DoctorList/doctor.jpg" height="100px" alt="">
+                </div>
+                <h3 class="fs-2 text-body-emphasis">${content[i].properties.name}</h3>
+                <p>Contact: ${content[i].properties.datasource.raw["contact:mobile"]}</p>
+
+                <form action="/book" method="POST">
+                <input type="hidden" name="hospitalName" value="${content[i].properties.name}">
+                <button class="btn btn-primary" style="width: 10rem; height:3rem; margin-left: 20%;">Book Now</button>
+                </form>
+            `;
+            cardsContainer.appendChild(card);
+        }
+
+        renderPagination();
+    }
+
+    function renderPagination() {
+        const paginationContainer = document.querySelector('.pagination');
+        const pageLinks = paginationContainer.querySelectorAll('.page-number');
+        pageLinks.forEach(link => link.remove());
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageItem = document.createElement('li');
+            pageItem.classList.add('page-item', 'page-number', currentPage === i ? 'active' : '');
+            pageItem.innerHTML = `<a class="page-link" href="#" onclick="goToPage(${i})">${i}</a>`;
+            paginationContainer.insertBefore(pageItem, document.getElementById('next-page'));
+        }
+
+        document.getElementById('prev-page').classList.toggle('disabled', currentPage === 1);
+        document.getElementById('next-page').classList.toggle('disabled', currentPage === totalPages);
+    }
+
+    function goToPage(page) {
+        currentPage = page;
+        renderCards();
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            renderCards();
+        }
+    }
+
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderCards();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        renderCards();
+    });
+</script>
